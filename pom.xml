@@ -23,6 +23,8 @@
         <module>zwx-haha-mq</module>
         <module>zwx-haha-mybatis</module>
         <module>zwx-haha-lock</module>
+        <module>zwx-haha-git</module>
+        <module>zwx-java-common</module>
     </modules>
 
 </project>
