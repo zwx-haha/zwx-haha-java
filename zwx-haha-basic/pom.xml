@@ -9,13 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>zwx-haha-k8s</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>zwx-haha-k8s-client</module>
-        <module>zwx-haha-k8s-pod-demo</module>
-        <module>zwx-haha-client</module>
-    </modules>
+    <artifactId>zwx-haha-basic</artifactId>
 
 
 </project>

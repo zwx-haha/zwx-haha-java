@@ -1,6 +1,6 @@
 package zwx.k8s.client.deployment;
 
-import io.kubernetes.client.custom.V1Patch;
+import io.kubernetes.client.openapi.custom.V1Patch;
 import io.kubernetes.client.openapi.ApiClient;
 import io.kubernetes.client.openapi.ApiException;
 import io.kubernetes.client.openapi.ApiResponse;
@@ -97,7 +97,7 @@ public class DeploymentUtils {
 
 
         //TODO: 修改腾旭云 esc deployment 副本数量
-        String jsonPatchStr = "[{\"op\":\"replace\",\"path\":\"/spec/replicas\", \"value\": " + 5 + " }]";
+        String jsonPatchStr = "[{\"op\":\"replace\",\"path\":\"/spec/replicas\", \"value\": " + 4 + " }]";
         V1Patch body = new V1Patch(jsonPatchStr);
         ApiResponse<V1Scale> response = deploymentUtils.updateDeployment(name, namespace, body);
         System.out.println(response.getStatusCode() + "" + response.getHeaders());

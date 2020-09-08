@@ -1,0 +1,13 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: zwx-haha-k8s-pod-demo
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    tags:
+      application: ${spring.application.name}
