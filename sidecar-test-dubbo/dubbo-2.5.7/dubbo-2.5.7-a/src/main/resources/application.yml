@@ -1,0 +1,35 @@
+server:
+  port: 8001
+spring:
+  dubbo:
+    application:
+      name: dubbo-2.5.7-a
+    base-package: com.zwx  # dubbo服务调用者所在的包
+    registry:
+      address: 192.168.150.1                   # zookeeper注册中心的地址
+      port: 2181                           # zookeeper注册中心的端口
+    protocol:
+      name: dubbo
+      serialization: hessian2
+    consumer:
+      timeout: 1000
+      check: false                           # 可选 服务治理 启动时检查提供者是否存在，true报错，false忽略 1.0.16以上版本
+      retries: 2                           # 服务调用重试次数
+      filter: "tracing"
+  zipkin:
+    base-url: http://127.0.0.1:9411
+    enabled: true
+    sender:
+      type: web
+    service:
+      name: dubbo-2.5.7-a
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#    instance-id: ${spring.cloud.client.ip-address}:${server.port}  #注册服务列表显示ip+端口
+#    lease-renewal-interval-in-seconds: 5
+#    lease-expiration-duration-in-seconds: 20
+#  client:
+#    service-url:
+#      defaultZone: http://192.168.150.1:8762/eureka/

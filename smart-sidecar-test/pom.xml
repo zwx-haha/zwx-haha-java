@@ -8,17 +8,44 @@
         <version>0.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>zwx-haha-cloud</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>eureka-server</module>
-        <module>service-demo-1</module>
-        <module>zwx-haha-drools</module>
-        <module>zwx-haha-prometheus</module>
-        <module>demo-01</module>
-        <module>zwx-haha-zipkin-server</module>
+        <module>boot-service-a</module>
+        <module>boot-service-b</module>
+        <module>dubbo-service</module>
+        <module>dubbo-service-impl</module>
     </modules>
+
+    <artifactId>smart-sidecar-test</artifactId>
+
+    <dependencies>
+        <!--dubbo 依赖 -->
+        <dependency>
+            <groupId>com.alibaba.spring.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <!-- zookeeper client依赖 -->
+        <dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-instrumentation-dubbo-rpc</artifactId>
+            <version>5.6.0</version>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>

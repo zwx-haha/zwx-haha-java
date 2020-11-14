@@ -31,7 +31,12 @@
         </dependency>
     </dependencies>
 
+
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <java.version>1.8</java.version>
     </properties>
 
@@ -47,6 +52,12 @@
         <module>zwx-haha-git</module>
         <module>zwx-java-common</module>
         <module>zwx-haha-basic</module>
+        <module>zwx-haha-grpc</module>
+        <module>zwx-web-ssh</module>
+        <module>smart-sidecar-test</module>
+        <module>sidecar-test-dubbo</module>
+        <module>zwx-haha-agent</module>
+        <module>zwx-haha-netty</module>
     </modules>
 
 </project>

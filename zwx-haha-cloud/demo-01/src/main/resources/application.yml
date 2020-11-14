@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: 8888
+
+
+

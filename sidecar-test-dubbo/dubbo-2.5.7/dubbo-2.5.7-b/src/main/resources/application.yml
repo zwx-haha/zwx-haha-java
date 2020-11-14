@@ -1,0 +1,23 @@
+server:
+  port: 8002
+spring:
+  dubbo:
+    application:
+      name: dubbo-2.5.7-b
+    base-package: com.zwx  # dubbo服务发布者实现类注解@service所在的包
+    registry:
+      address: 192.168.150.1                   # zookeeper注册中心的地址
+      port: 2181                           # zookeeper注册中心的端口
+    protocol:
+      name: dubbo
+      serialization: hessian2
+    provider:
+      retries: 0                           # 服务调用重试次数，服务发布者不给重试，让服务调用者自己重试
+      filter: "tracing"
+  zipkin:
+    base-url: http://127.0.0.1:9411
+    enabled: true
+    service:
+      name: dubbo-2.5.7-b
+    sender:
+      type: web

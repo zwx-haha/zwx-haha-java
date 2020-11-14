@@ -1,0 +1,33 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}  #注册服务列表显示ip+端口
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 20
+  client:
+    service-url:
+      defaultZone: http://192.168.150.5:8762/eureka/
+server:
+  port: 8888
+
+spring:
+  application:
+    name: boot-service-b
+  dubbo:
+    application:
+      name: boot-service-b
+    server: true
+    registry:
+      address: zookeeper://127.0.0.1:2181
+    protocol:
+      name: dubbo
+      port: 20880
+    provider:
+      filter: "tracing"
+  zipkin:
+    base-url: http://127.0.0.1:9411
+    enabled: true
+    sender:
+      type: web
+    service:
+      name: boot-service-b

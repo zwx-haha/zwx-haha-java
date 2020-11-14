@@ -1,0 +1,17 @@
+server:
+  port: 8005
+
+dubbo:
+  scan:
+    base-packages: com.zwx
+  application:
+    name: dubbo-3.0-b
+  protocol:
+    name: dubbo
+    port: 12346
+  registry:
+    address: zookeeper://127.0.0.1:2181
+
+spring:
+  application:
+    name: dubbo-3.0-b
