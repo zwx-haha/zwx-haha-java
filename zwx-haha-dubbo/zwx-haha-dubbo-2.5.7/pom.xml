@@ -3,19 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>zwx-haha-java</artifactId>
+        <artifactId>zwx-haha-dubbo</artifactId>
         <groupId>com.zwx</groupId>
         <version>0.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>zwx-haha-netty</artifactId>
+    <artifactId>zwx-haha-dubbo-2.5.7</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>zwx-haha-netty-serve-demo1</module>
-        <module>zwx-haha-netty-client-demo1</module>
-        <module>zwx-haha-http2-demo1</module>
-        <module>thrift-demo01</module>
+        <module>provider-2.5.7</module>
+        <module>consumer-2.5.7</module>
     </modules>
 
 

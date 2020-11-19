@@ -9,6 +9,8 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.logging.LogLevel;
+import io.netty.handler.logging.LoggingHandler;
 
 /**
  * <p></p>
@@ -28,6 +30,7 @@ public class Server {
             b.group(bossGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
                     .option(ChannelOption.SO_BACKLOG, 1024)
+                    .handler(new LoggingHandler(LogLevel.INFO))
                     .childHandler(new ChildChannelHandler());
             //绑定端口，同步等待成功
             ChannelFuture f = b.bind(port).sync();

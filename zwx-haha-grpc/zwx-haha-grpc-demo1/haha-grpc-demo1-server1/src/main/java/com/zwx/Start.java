@@ -23,6 +23,7 @@ public class Start {
     private Server server;
 
     private void start() throws IOException {
+        
         server = ServerBuilder.forPort(port)
                 .addService(new GreeterImpl())
                 .build()

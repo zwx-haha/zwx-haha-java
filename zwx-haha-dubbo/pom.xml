@@ -9,13 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>zwx-haha-netty</artifactId>
+    <artifactId>zwx-haha-dubbo</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>zwx-haha-netty-serve-demo1</module>
-        <module>zwx-haha-netty-client-demo1</module>
-        <module>zwx-haha-http2-demo1</module>
-        <module>thrift-demo01</module>
+        <module>zwx-haha-dubbo-3.0</module>
+        <module>zwx-haha-dubbo-2.5.7</module>
+        <module>zwx-haha-dubbo-interface</module>
     </modules>
 
 

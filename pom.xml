@@ -58,6 +58,7 @@
         <module>sidecar-test-dubbo</module>
         <module>zwx-haha-agent</module>
         <module>zwx-haha-netty</module>
+        <module>zwx-haha-dubbo</module>
     </modules>
 
 </project>
